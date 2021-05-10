@@ -1,0 +1,459 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 1.6;
+}
+
+button, .header .headerInfo button, .facilities button {
+  background-color: #27AD6C;
+  color: white;
+  padding: 12px 19px;
+  border: none;
+  outline-width: 0px;
+  border-radius: 3px;
+}
+
+resources, .resources .resources__news, .resources .resources__latest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 15px;
+}
+
+.header {
+  background-image: url("../pics/img_hero-image.png");
+  min-height: 100vh;
+  color: white;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.header a {
+  position: absolute;
+  right: 30px;
+  top: 39px;
+  font-size: 24px;
+  display: none;
+}
+
+.header > * {
+  position: relative;
+}
+
+.header .headerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+}
+
+.header .headerNav > * {
+  margin-top: 30px;
+}
+
+.header .headerNav .headerNav__name {
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header .headerNav .headerNav__name h4 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.header .headerNav .headerNav__name h4 > span {
+  letter-spacing: 6px;
+  margin-top: -5px;
+}
+
+.header .headerNav .headerNav__name h4:hover {
+  color: #06fb06;
+}
+
+.header .headerNav .headerNav__name img {
+  width: 35px;
+}
+
+.header .headerNav .headerNav__list {
+  display: flex;
+  align-items: center;
+}
+
+.header .headerNav .headerNav__list a {
+  display: none;
+}
+
+.header .headerNav .headerNav__list ul {
+  list-style: none;
+  width: 280px;
+  display: flex;
+  column-gap: 40px;
+}
+
+.header .headerNav .headerNav__list ul > *:hover {
+  color: #06fb06;
+}
+
+.header .headerNav .headerNav__list ul li {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.header .headerNav .headerNav__list ul .headerNav__active {
+  color: #06fb06;
+}
+
+.header .headerNav .headerNav__list img {
+  cursor: pointer;
+  margin-left: 58px;
+}
+
+.header .headerInfo {
+  display: grid;
+  place-items: center;
+  margin-top: 160px;
+}
+
+.header .headerInfo h2 {
+  font-size: 70px;
+}
+
+.header .headerInfo p {
+  max-width: 41%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 19px;
+  color: lightgray;
+}
+
+.header .headerInfo button:hover {
+  filter: brightness(87%);
+  cursor: pointer;
+}
+
+.skills {
+  margin-top: 25px;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.skills h1 {
+  font-weight: 600;
+  color: gray;
+  margin-bottom: 20px;
+  font-size: 29px;
+}
+
+.skills div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 30px;
+}
+
+.skills div .skills__box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.skills div .skills__box img {
+  width: 100%;
+}
+
+.skills div .skills__box h5 {
+  color: #06fb06;
+  font-size: 18px;
+}
+
+.skills div .skills__box p {
+  margin: 0 15px 15px 15px;
+  margin-top: -10px;
+}
+
+.resources {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 85px;
+}
+
+.resources .resources__news p {
+  margin: 10px 0;
+  color: #27AD6C;
+  padding-right: 180px;
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.resources .resources__news p i {
+  margin-bottom: 5px;
+  color: lightgray;
+}
+
+.resources .resources__news p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.resources .resources__news > *:nth-child(5) {
+  border-bottom: none;
+}
+
+.resources .resources__vertical {
+  background: #06fb06;
+  width: 1px;
+  height: 330px;
+}
+
+.resources .resources__horizontal {
+  display: none;
+}
+
+.resources .resources__latest p {
+  color: #27AD6C;
+  padding-bottom: 5px;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid lightgray;
+}
+
+.resources .resources__latest p span {
+  color: #cccccc;
+}
+
+.resources .resources__latest p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.resources .resources__latest > *:nth-child(5) {
+  border-bottom: none;
+}
+
+.icons {
+  margin: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+}
+
+.icons .underline {
+  height: 1px;
+  width: 140px;
+  background: #06fb06;
+}
+
+.icons img {
+  width: 50px;
+}
+
+.photos {
+  display: grid;
+  place-items: center;
+  margin: 20px;
+  padding: 15px;
+}
+
+.photos h1 {
+  font-size: 29px;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.photos .photosGallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.photos .photosGallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.facilities {
+  padding: 56px;
+  display: grid;
+  place-items: center;
+  background: #423633;
+  color: white;
+}
+
+.facilities h1 {
+  margin-bottom: 50px;
+}
+
+.facilities .facilities__boxHead {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 40px;
+  width: 100%;
+}
+
+.facilities .facilities__boxHead .facilities__box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  column-gap: 9px;
+}
+
+.facilities .facilities__boxHead .facilities__box .facilities__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.facilities .facilities__boxHead .facilities__box .facilities__info h5 {
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+.facilities .facilities__boxHead .facilities__box .facilities__info p {
+  color: #9e9d9d;
+}
+
+.facilities .header .headerInfo button, .header .headerInfo .facilities button, .facilities button {
+  margin-top: 50px;
+}
+
+.facilities button:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #333333;
+  color: white;
+  display: flex;
+  padding: 18px 27px;
+  justify-content: space-between;
+}
+
+.footer p {
+  margin-left: 40px;
+}
+
+.footer ul {
+  display: flex;
+  column-gap: 35px;
+  list-style: none;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .header > a {
+    display: block;
+    color: #06fb06;
+  }
+  .headerNav.activeheight {
+    height: auto;
+  }
+  .headerNav {
+    margin-top: -14px;
+    background-color: #423633;
+    margin-left: -20px;
+    flex-direction: column;
+    row-gap: 15px;
+    height: 100px;
+  }
+  .headerNav .headerNav__name {
+    margin-left: -189px;
+    font-size: 18px;
+    padding: 0px;
+  }
+  .headerNav .headerNav__list {
+    margin-left: -80px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .headerNav .headerNav__list ul > li {
+    display: none;
+  }
+  .headerNav .headerNav__list ul.activenav {
+    flex-direction: column;
+    margin-top: -30px;
+  }
+  .headerNav .headerNav__list ul.activenav li {
+    display: block;
+    padding: 8px;
+    width: 91vw;
+    margin-left: 20px;
+  }
+  .headerNav .headerNav__list ul.activenav li:hover {
+    background-color: gray;
+    color: black;
+  }
+  .headerNav .headerNav__list ul > *:nth-child(4) {
+    padding-bottom: 8px;
+    margin-bottom: -10px;
+  }
+  .headerNav .headerNav__list img {
+    display: none;
+  }
+  .headerInfo > h2 {
+    font-size: 31px !important;
+  }
+  .headerInfo > p {
+    max-width: 88% !important;
+    text-align: center;
+  }
+  .headerInfo {
+    row-gap: 18px;
+  }
+  .resources {
+    margin: 0 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .resources .resources__vertical {
+    display: none;
+  }
+  .resources .resources__horizontal {
+    margin: 50px 0;
+    display: block;
+    height: 2px;
+    width: 300px;
+    background: #06fb06;
+  }
+  .facilities__boxHead {
+    margin-left: -80px;
+  }
+  .footer {
+    font-size: 12px;
+  }
+  .footer ul {
+    column-gap: 8px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
